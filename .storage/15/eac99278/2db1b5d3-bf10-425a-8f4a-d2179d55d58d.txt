@@ -1,0 +1,58 @@
+$ ls -la
+total 6917
+drwxr-xr-x 134 root root 3551232 Sep  1 21:51 .
+drwxr-xr-x   1 root root      97 Sep  1 21:51 ..
+-rw-rw-r--   1 root root   26544 Sep  1 21:48 .MGXEnv.json
+drwxr-xr-x   2 root root    4096 Sep  1 21:51 .MGXTools
+drwxr-xr-x 103 root root 1101824 Sep  1 21:48 .git
+-rw-rw-r--   1 root root    1472 Aug 31 08:03 .gitattributes
+-rw-rw-r--   1 root root     476 Aug 31 08:03 .gitignore
+-rw-r--r--   1 root root      25 Sep  1 21:48 .timeline.json
+-rw-rw-r--   1 root root    4104 Sep  1 21:48 .wiki.md
+drwxrwxr-x  25 root root 2392064 Aug 31 08:03 flask_template
+$ cd flask_template && find . -type f -name "*.py" | head -20
+
+./app/__init__.py
+./app/models.py
+./app/routes.py
+./app.py
+./config.py
+./deploy.py
+./ml_model/__init__.py
+./ml_model/data_preprocessing.py
+./ml_model/model_utils.py
+./ml_model/train_model.py
+$ ls -la
+
+total 8107
+drwxrwxr-x  25 root root 2392064 Aug 31 08:03 .
+drwxr-xr-x 134 root root 3551232 Sep  1 21:51 ..
+-rw-rw-r--   1 root root     259 Aug 31 08:03 .dockerignore
+-rw-rw-r--   1 root root     915 Aug 31 08:03 Dockerfile
+-rw-rw-r--   1 root root    4909 Aug 31 08:03 README.md
+drwxrwxr-x   5 root root   24576 Aug 31 08:03 app
+-rw-rw-r--   1 root root     125 Aug 31 08:03 app.py
+-rw-rw-r--   1 root root     389 Aug 31 08:03 config.py
+-rw-rw-r--   1 root root    3405 Aug 31 08:03 deploy.py
+-rw-rw-r--   1 root root     788 Aug 31 08:03 docker-compose.yml
+drwxrwxr-x  10 root root 2318336 Aug 31 08:03 ml_model
+-rw-rw-r--   1 root root     141 Aug 31 08:03 requirements.txt
+-rw-rw-r--   1 root root     355 Aug 31 08:03 template_config.json
+-rw-rw-r--   1 root root    1329 Aug 31 08:03 todo.md
+$ ls -la ml_model/
+
+total 6852
+drwxrwxr-x 10 root root 2318336 Aug 31 08:03 .
+drwxrwxr-x 25 root root 2392064 Aug 31 08:03 ..
+-rw-rw-r--  1 root root      18 Aug 31 08:03 __init__.py
+drwxrwxr-x  3 root root  110592 Aug 31 08:03 data
+-rw-rw-r--  1 root root    3548 Aug 31 08:03 data_preprocessing.py
+-rw-rw-r--  1 root root    5796 Aug 31 08:03 model_utils.py
+drwxrwxr-x  3 root root 2183168 Aug 31 08:03 models
+-rw-rw-r--  1 root root    1719 Aug 31 08:03 train_model.py
+$ ls -la models/ 2>/dev/null || echo "models directory doesn't exist"
+
+models directory doesn't exist
+$ ls -la data/ 2>/dev/null || echo "data directory doesn't exist"
+
+data directory doesn't exist

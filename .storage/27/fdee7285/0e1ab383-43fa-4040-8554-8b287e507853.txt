@@ -1,0 +1,54 @@
+$ cd ml_model && python train_model.py
+Preparing training data...
+Training Random Forest model...
+Model Accuracy: 0.6100
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.60      0.72      0.66       104
+           1       0.62      0.49      0.55        96
+
+    accuracy                           0.61       200
+   macro avg       0.61      0.61      0.60       200
+weighted avg       0.61      0.61      0.60       200
+
+Model saved to models/churn_model.pkl
+Sample data saved to data/sample_data.csv
+$ cd .. && ls -la models/
+
+ls: cannot access 'models/': No such file or directory
+$ pkill -f "python app.py" || true
+
+$ lsof -ti:5000 | xargs kill -9 || true
+
+bash: line 10: lsof: command not found
+
+Usage:
+ kill [options] <pid> [...]
+
+Options:
+ <pid> [...]            send signal to every <pid> listed
+ -<signal>, -s, --signal <signal>
+                        specify the <signal> to be sent
+ -q, --queue <value>    integer value to be sent with the signal
+ -l, --list=[<signal>]  list all signal names, or convert one to a name
+ -L, --table            list all signal names in a nice table
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see kill(1).
+$ python app.py
+
+Model file not found at models/churn_model.pkl. Please train the model first.
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://100.64.111.129:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 111-277-078

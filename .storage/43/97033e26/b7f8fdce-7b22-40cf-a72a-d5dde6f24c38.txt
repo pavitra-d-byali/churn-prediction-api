@@ -1,0 +1,21 @@
+$ curl -s http://localhost:5001/health
+{
+  "model_loaded": true,
+  "service": "Customer Churn Prediction API",
+  "status": "healthy"
+}
+$ ps aux | grep "python app.py" | grep -v grep | awk '{print $2}' | xargs kill -9 2>/dev/null || true
+
+$ python -c "
+import socket
+def find_free_port():
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.bind(('', 0))
+        s.listen(1)
+        port = s.getsockname()[1]
+    return port
+port = find_free_port()
+print(port)
+" > free_port.txt && cat free_port.txt
+
+51581

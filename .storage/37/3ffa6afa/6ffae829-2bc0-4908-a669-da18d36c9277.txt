@@ -1,0 +1,21 @@
+$ curl -s http://localhost:5000/health | head -5
+{
+  "model_loaded": true,
+  "service": "Customer Churn Prediction API",
+  "status": "healthy"
+}
+$ ps aux | grep "python app.py" | grep -v grep | awk '{print $2}' | xargs kill -9 2>/dev/null || true
+
+$ netstat -tlnp 2>/dev/null | grep :5000 || echo "Port 5000 check complete"
+
+Port 5000 check complete
+$ python -c "
+import socket
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.bind(('', 0))
+port = s.getsockname()[1]
+s.close()
+print(f'Available port: {port}')
+" > available_port.txt && cat available_port.txt
+
+Available port: 38781

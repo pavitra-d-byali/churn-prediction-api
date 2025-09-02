@@ -1,0 +1,8 @@
+$ curl -s http://localhost:5001/health
+{
+  "model_loaded": true,
+  "service": "Customer Churn Prediction API",
+  "status": "healthy"
+}
+$ ps aux | grep "python app.py" | grep -v grep | awk '{print $2}' | xargs kill -9 2>/dev/null || true
+

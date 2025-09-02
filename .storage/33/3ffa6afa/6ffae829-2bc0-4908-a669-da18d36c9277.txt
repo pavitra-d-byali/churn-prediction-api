@@ -1,0 +1,6 @@
+$ curl -s http://localhost:5000/health | head -5
+{
+  "model_loaded": true,
+  "service": "Customer Churn Prediction API",
+  "status": "healthy"
+}

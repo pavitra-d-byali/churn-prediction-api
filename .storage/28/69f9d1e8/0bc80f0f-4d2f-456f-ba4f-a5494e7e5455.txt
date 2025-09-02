@@ -1,0 +1,11 @@
+$ ls -la ml_model/
+total 6740
+drwxrwxr-x 14 root root 2338816 Sep  1 21:58 .
+drwxrwxr-x 36 root root 2449408 Sep  1 22:01 ..
+-rw-rw-r--  1 root root      18 Aug 31 08:03 __init__.py
+drwxr-xr-x  5 root root   20480 Sep  1 22:00 __pycache__
+drwxrwxr-x  3 root root  110592 Aug 31 08:03 data
+-rw-rw-r--  1 root root    3548 Aug 31 08:03 data_preprocessing.py
+-rw-rw-r--  1 root root    5796 Aug 31 08:03 model_utils.py
+drwxrwxr-x  3 root root 1970176 Aug 31 08:03 models
+-rw-rw-r--  1 root root    1719 Aug 31 08:03 train_model.py

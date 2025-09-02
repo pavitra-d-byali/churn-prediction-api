@@ -1,0 +1,39 @@
+$ ls -la ml_model/
+total 6740
+drwxrwxr-x 14 root root 2338816 Sep  1 21:58 .
+drwxrwxr-x 36 root root 2449408 Sep  1 22:01 ..
+-rw-rw-r--  1 root root      18 Aug 31 08:03 __init__.py
+drwxr-xr-x  5 root root   20480 Sep  1 22:00 __pycache__
+drwxrwxr-x  3 root root  110592 Aug 31 08:03 data
+-rw-rw-r--  1 root root    3548 Aug 31 08:03 data_preprocessing.py
+-rw-rw-r--  1 root root    5796 Aug 31 08:03 model_utils.py
+drwxrwxr-x  3 root root 1970176 Aug 31 08:03 models
+-rw-rw-r--  1 root root    1719 Aug 31 08:03 train_model.py
+$ cp -r ml_model/models . && cp -r ml_model/data .
+
+$ ls -la models/
+
+total 6663
+drwxr-xr-x  3 root root    8192 Sep  1 22:02 .
+drwxrwxr-x 39 root root 4636672 Sep  1 22:02 ..
+-rw-r--r--  1 root root 2177955 Sep  1 22:02 churn_model.pkl
+$ pkill -f "python app.py"
+
+$ python app.py
+
+Model loaded successfully. Accuracy: 0.6100
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://100.64.111.129:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 111-277-078
+127.0.0.1 - - [01/Sep/2025 22:02:19] "GET /health HTTP/1.1" 200 -
+ * Detected change in '/workspace/flask_template/app.py', reloading
+ * Detected change in '/workspace/flask_template/app.py', reloading
+Model loaded successfully. Accuracy: 0.6100
+ * Restarting with watchdog (inotify)

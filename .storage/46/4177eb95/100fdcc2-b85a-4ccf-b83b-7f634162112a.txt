@@ -1,0 +1,22 @@
+$ ls -la
+total 19752
+drwxrwxr-x  42 root root  4751360 Sep  1 22:03 .
+drwxr-xr-x 252 root root 10764288 Sep  2 03:21 ..
+-rw-rw-r--   1 root root      259 Aug 31 08:03 .dockerignore
+drwxr-xr-x   3 root root     8192 Sep  1 22:01 .mgx
+-rw-rw-r--   1 root root      915 Aug 31 08:03 Dockerfile
+-rw-rw-r--   1 root root     4909 Aug 31 08:03 README.md
+drwxr-xr-x   3 root root     8192 Sep  1 22:00 __pycache__
+drwxrwxr-x   8 root root    45056 Sep  1 21:58 app
+-rw-rw-r--   1 root root      448 Sep  1 22:03 app.py
+-rw-r--r--   1 root root       22 Sep  1 22:03 available_port.txt
+-rw-rw-r--   1 root root      389 Aug 31 08:03 config.py
+drwxr-xr-x   3 root root   110592 Sep  1 22:02 data
+-rw-rw-r--   1 root root     3405 Aug 31 08:03 deploy.py
+-rw-rw-r--   1 root root      788 Aug 31 08:03 docker-compose.yml
+-rw-r--r--   1 root root        6 Sep  1 22:03 free_port.txt
+drwxrwxr-x  14 root root  2338816 Sep  1 21:58 ml_model
+drwxr-xr-x   3 root root  2183168 Sep  1 22:02 models
+-rw-rw-r--   1 root root      140 Sep  1 21:58 requirements.txt
+-rw-rw-r--   1 root root      355 Aug 31 08:03 template_config.json
+-rw-rw-r--   1 root root     1329 Aug 31 08:03 todo.md

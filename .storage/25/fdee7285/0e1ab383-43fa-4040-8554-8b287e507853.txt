@@ -1,0 +1,22 @@
+$ cd ml_model && python train_model.py
+Preparing training data...
+Training Random Forest model...
+Model Accuracy: 0.6100
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.60      0.72      0.66       104
+           1       0.62      0.49      0.55        96
+
+    accuracy                           0.61       200
+   macro avg       0.61      0.61      0.60       200
+weighted avg       0.61      0.61      0.60       200
+
+Model saved to models/churn_model.pkl
+Sample data saved to data/sample_data.csv
+$ cd .. && ls -la models/
+
+ls: cannot access 'models/': No such file or directory
+$ pkill -f "python app.py" || true
+
